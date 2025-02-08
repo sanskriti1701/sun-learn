@@ -2,29 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { FaInstagram, FaLinkedin, FaYoutube, FaCode } from "react-icons/fa";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-6 bg-[#F9FAFB] text-gray-900 overflow-hidden">
-      
-      {/* Background Glow Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#ffffff] to-[#f0f3f7]"></div>
-
-        {/* Floating Light Orbs */}
-        <motion.div
-          animate={{ x: [0, 50, -50, 0], y: [0, 30, -30, 0] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 left-10 w-[200px] h-[200px] bg-[#8A2BE2] opacity-15 blur-[100px] rounded-full"
-        ></motion.div>
-
-        <motion.div
-          animate={{ x: [0, -40, 40, 0], y: [0, -20, 20, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-16 right-16 w-[250px] h-[250px] bg-[#0070F3] opacity-15 blur-[120px] rounded-full"
-        ></motion.div>
-      </div>
 
       {/* Header Text */}
       <motion.h1
@@ -45,6 +27,76 @@ export default function Home() {
         Step-by-step guides for amazing projects!
       </motion.p>
 
+      {/* Social Media Links */}
+      <div className="mt-8 flex space-x-6">
+        <a
+          href="https://instagram.com/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-4 bg-pink-500 text-white rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300"
+        >
+          <FaInstagram size={28} />
+        </a>
+        <a
+          href="https://linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-4 bg-blue-600 text-white rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300"
+        >
+          <FaLinkedin size={28} />
+        </a>
+
+        <a
+          href="https://leetcode.com/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-4 bg-gray-800 text-white rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300"
+        >
+          <FaCode size={28} />
+        </a>
+
+        <a
+          href="https://youtube.com/yourchannel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-4 bg-red-500 text-white rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300"
+        >
+          <FaYoutube size={28} />
+        </a>
+      </div>
+
+
+      {/* YouTube Videos Section */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+        <div className="p-4 rounded-2xl shadow-lg border border-gray-200 bg-white">
+          <h3 className="text-xl font-semibold text-gray-900">Latest Video 🎥</h3>
+          <div className="mt-4">
+            <iframe
+              width="100%"
+              height="200"
+              src="https://www.youtube.com/embed/your-video-id"
+              title="YouTube video"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div className="p-4 rounded-2xl shadow-lg border border-gray-200 bg-white">
+          <h3 className="text-xl font-semibold text-gray-900">Another Tutorial 📚</h3>
+          <div className="mt-4">
+            <iframe
+              width="100%"
+              height="200"
+              src="https://www.youtube.com/embed/another-video-id"
+              title="YouTube video"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
       {/* Project Cards */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
         <motion.div
@@ -52,13 +104,11 @@ export default function Home() {
           whileTap={{ scale: 0.98 }}
           className="relative p-6 rounded-2xl shadow-2xl backdrop-blur-xl border border-gray-200 transition-all duration-300 bg-white/80 overflow-hidden"
         >
-          {/* Neon Glow on Hover */}
           <motion.div
             className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#8A2BE2]/10 to-[#0070F3]/10 rounded-2xl opacity-0 transition-all duration-300"
             whileHover={{ opacity: 1 }}
           ></motion.div>
 
-          {/* Animated Dots Pattern */}
           <div className="absolute top-2 right-2 w-12 h-12 bg-gradient-to-r from-[#8A2BE2] to-[#0070F3] opacity-20 rounded-full blur-lg"></div>
 
           <h3 className="text-2xl font-bold text-gray-900">🚀 Project Title</h3>
