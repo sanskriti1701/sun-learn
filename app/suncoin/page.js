@@ -11,6 +11,11 @@ function page() {
         <BulletPoint>SunCoin is a decentralized cryptocurrency that is built on the Ethereum blockchain.</BulletPoint>
         <BulletPoint>SunCoin is a decentralized cryptocurrency that is built on the Ethereum blockchain.</BulletPoint>
         <BulletPoint>SunCoin is a decentralized cryptocurrency that is built on the Ethereum blockchain.</BulletPoint>
+        <Heading>SunCoin</Heading>
+        <Subheading>SunCoin is a decentralized cryptocurrency that is built on the Ethereum blockchain.</Subheading>
+        <BulletPoint>SunCoin is a decentralized cryptocurrency that is built on the Ethereum blockchain.</BulletPoint>
+        <BulletPoint>SunCoin is a decentralized cryptocurrency that is built on the Ethereum blockchain.</BulletPoint>
+        <BulletPoint>SunCoin is a decentralized cryptocurrency that is built on the Ethereum blockchain.</BulletPoint>
     </div>
   )
 }
